@@ -1,0 +1,58 @@
+import java.util.Scanner;
+public class Prac {
+	static Scanner entrada=new  Scanner(System.in);
+	public static void main(String[] args) {
+	
+	System.out.println("Separar numeros Pares de Impares en un Arreglo numerico");
+	System.out.println("Cuantos numeros quieres guardar?");
+	int [] numeros=new int [entrada.nextInt()];
+	
+	System.out.println("Guardando Numeros: ");
+	for (int i=0; i<numeros.length; i++) {
+		System.out.print((i+1) + " .-Ingresa numero: ");
+		numeros[i]=entrada.nextInt();
+	}
+	
+	int contadorPares=0, contadorImpares=0;
+	
+	for(int i=0; i<numeros.length; i++) {
+		if(numeros[i] %2 ==0) {
+			contadorPares++;
+		}
+		else {
+			contadorImpares++;
+		}
+	}
+	
+	int par[]=new int [contadorPares];
+	int impar[]=new int [contadorImpares];
+	
+//	contadorPares=0; 
+//	contadorImpares=0;
+	int indicePar=0;
+	int indiceImpar=0;
+	
+	for (int i=0; i<numeros.length; i++) {
+		if(numeros[i] %2 == 0) {
+			par[indicePar]= numeros[i];
+			indicePar++;
+		}
+		else {
+			impar[indiceImpar]=numeros[i];
+			indiceImpar++;
+		}
+	}
+	
+	System.out.println("Arreglo Pares:");
+	for (int i=0; i<indicePar; i++) {
+		System.out.println(par[i]);
+	}
+	
+	
+	System.out.println("Arreglo Impares: ");
+	for(int i=0; i<indiceImpar; i++) {
+		System.out.println(impar[i]);
+	}
+	
+	}
+}

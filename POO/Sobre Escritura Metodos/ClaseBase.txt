@@ -1,0 +1,12 @@
+package ejemplo;
+
+public class ClaseBase {
+	
+	
+	public void saySomething() {
+		System.out.println("Soy la clase base");
+	}
+	
+
+	
+}

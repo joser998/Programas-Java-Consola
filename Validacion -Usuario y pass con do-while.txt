@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class Strings {
+	public static void main(String[] args) {
+		Scanner user = new Scanner (System.in);
+		String id="Jose";
+		String pass="Luis";
+		String nombre="";
+		String contra="";
+		int bandera=0;
+		
+		System.out.println("Bienvenido");
+	do {
+		bandera=0;
+		System.out.println("Usuario: ");
+		nombre=user.nextLine();
+		
+		if(nombre.equals(id)==false) {
+			bandera=1;
+			System.out.println("Usuario incorrecto, intentalo de nuevo\n");
+		}
+	}while(bandera!=0);
+	
+do {
+		bandera=0;
+		System.out.println("Password: ");
+		contra=user.nextLine();
+		
+		
+		if(contra.equals(pass)==false) {
+			bandera=1;
+			System.out.println("Contraseña incorrecta, intentalo de nuevo\n");
+		}
+}while(bandera!=0);
+	
+	System.out.println("Bienvenido\nIngresaste con: " + nombre + " y con " + contra);
+		
+	}
+}

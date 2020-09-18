@@ -1,0 +1,45 @@
+import java.util.Scanner;
+public class Burbuja {
+	public static void main(String[] args){
+		
+		Scanner entrada = new Scanner (System.in);
+		int cant_datos=0;
+		int pos=0, aux=0;
+		
+		
+		System.out.println("Introduce cantidad de datos a ordenar: ");
+		cant_datos=entrada.nextInt();
+		
+		int [] datos = new int [cant_datos];
+		
+		//guardar...
+		for (int i=0; i<cant_datos; i++) {
+			System.out.println("Digita numero: ");
+			datos[i]=entrada.nextInt();
+		}
+		
+		
+		//ordenar...
+		for (int i=0; i<cant_datos; i++) {
+			pos=i;
+			aux=datos[pos];
+			
+			while(pos> 0 && datos[pos-1] > aux) {
+				datos[pos]=datos[pos-1];
+				pos--;
+			}
+			
+			datos[pos]=aux;
+		}
+		
+		
+		for(int i=0; i<cant_datos; i++) {
+			System.out.println(datos[i]);
+		}
+
+
+	}
+
+}
+
+

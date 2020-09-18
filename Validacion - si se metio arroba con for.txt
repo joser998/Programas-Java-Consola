@@ -1,0 +1,42 @@
+/*
+  Este programa valida si metimos una @ o no.
+  pedimos variable tipo String (texto) y mediante un for hacemos un recorrido por todo el largo del String
+  y si en algun caracter se topa con un @ se activa la bandera a true.
+  Despues se hace una condicion si la bandera esta activa que mande mensaje de lo contrario que nos diga que no metimos arroba
+ */
+
+
+import java.util.Scanner;
+
+public class programming {
+
+	public static void main(String[] args) {
+		
+		Scanner recibo = new Scanner (System.in);
+		String mail="";
+		boolean arroba=false;
+		
+		
+		
+		
+		System.out.println("Introduce mail: ");
+		mail=recibo.nextLine();
+		
+		for (int i=0; i<mail.length(); i++) {   // hace un barrido de todo el mail que hallamos metido, sin importal el largo de la cadena
+			if (mail.charAt(i)=='@') {
+				arroba=true;
+			}
+			
+		} 
+		
+		if (arroba==true) {
+			System.out.println("metiste una arroba " + mail);
+		}
+		else {
+			System.out.println("no metiste arroba");
+		}
+	
+		
+	}
+
+}

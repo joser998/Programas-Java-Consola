@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class User_pass {
+	public static void main(String[] args) {
+	String user="Jose";	
+	String nombre="";
+	Scanner recibo = new Scanner (System.in);
+	
+		
+		while(user.equals(nombre)==false) {
+			
+			System.out.println("Introduce la contraseña: ");
+			nombre=recibo.nextLine();
+			
+			if(user.equals(nombre)==false) {
+				System.out.println("contraseña incorrecta....\n");
+				
+			}
+			
+		}
+		
+		System.out.println("contraseña correcta\n");
+		
+		
+
+	}
+
+}

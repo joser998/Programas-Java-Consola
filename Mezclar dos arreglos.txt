@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class Prac {
+static Scanner entrada=new  Scanner(System.in);
+public static void main(String[] args) {
+	
+	float [] arreglo1=new float [10];
+	float [] arreglo2=new float [10];
+	float [] arreglo3=new float [20];
+	
+	System.out.println("Introduce numeros primer arreglo: ");
+	for(int i=0; i<10; i++) {
+		System.out.println((i+1) + " .-Ingresa numero: ");
+		arreglo1[i]=entrada.nextFloat();
+	}
+	
+	
+	System.out.println("Introduce numeros segundo arreglo: ");
+	for(int i=0; i<10; i++) {
+		System.out.println((i+1) + " .-Ingresa numero: ");
+		arreglo2[i]=entrada.nextFloat();
+	}
+	
+	//Mezclamos dos arreglos
+	//Usamos iterador i para arreglo1 y arreglo2
+	//Usamos iterador J para el tercer arreglo
+	
+	int j=0;
+	for(int i=0; i<10; i++) {
+		arreglo3[j]=arreglo1[i];
+		j++;
+		arreglo3[j]=arreglo2[i];
+		j++;
+	}
+	
+	System.out.println("\nLa Mezcla de los arreglos.\nEl tercer arreglo es: ");
+	for(int i=0; i<20; i++) {
+		System.out.print(arreglo3[i]+ " ");
+	}
+	System.out.println();
+	
+		
+	}
+
+}

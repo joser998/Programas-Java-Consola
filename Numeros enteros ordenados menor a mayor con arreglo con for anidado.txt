@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Ordenamiento_num_enteros {
+	public static void main(String[] args) {
+		
+		Scanner recibo = new Scanner (System.in);
+		int vuelta=0;
+		int aux=0;
+		
+		System.out.println("Cuantos numeros vas a meter en arreglo: ");
+		vuelta=recibo.nextInt();
+		
+		int [] numeros = new int [vuelta];
+		
+		for	(int i=0; i<vuelta; i++) {
+			System.out.println("Introduce numeros enteros: ");
+			numeros[i]=recibo.nextInt();
+		}
+			
+			System.out.println();
+			System.out.println();
+			
+			
+			for (int i=0; i<vuelta; i++) {
+				for (int j=i + 1; j<vuelta; j++ ) {
+					if (numeros[j] < numeros[i]) {
+						aux=numeros[j];
+						numeros[j]=numeros[i];
+						numeros[i]=aux;
+					}
+				}
+			}
+			
+			for (int i=0; i<vuelta; i++) {
+				System.out.println("acomodados: " + numeros[i]);
+			}
+			
+			
+			
+	}
+
+}

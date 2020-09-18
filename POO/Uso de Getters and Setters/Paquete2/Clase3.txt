@@ -1,0 +1,19 @@
+package Paquete2;
+import java.util.Scanner;
+import Paquete1.Clase1;
+
+public class Clase3 {
+	public static void main (String args[]) {
+		Scanner sc= new Scanner (System.in);
+		
+		Clase1 ob=new Clase1();		
+		System.out.println("Dame nuevo numero ");
+		int numerito=sc.nextInt();
+		
+		ob.setNumero(numerito);
+		System.out.println("el nuevo numero es: "+ob.getNumero());
+				
+	}
+
+
+}

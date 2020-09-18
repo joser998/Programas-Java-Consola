@@ -1,0 +1,43 @@
+package Paquete1;
+import java.util.*;
+public class Clase1 {
+	Scanner sc = new Scanner (System.in);
+	
+	public String nombre;
+	private int dia;
+	protected int numero;
+	
+	//Contructor**********************************************************************************************
+	public Clase1(){
+		this.nombre=nombre;
+		this.dia=dia;
+		this.numero=numero;
+	}
+//***************************************************************************************************************	
+	
+	
+	public void setDia(int dia) {
+		this.dia=dia;
+	}
+	public int getDia() {
+		return dia;
+	}
+	
+	
+	public void setNombre(String nombre) {
+		System.out.println("Me diste: "+ nombre);
+		this.nombre = nombre;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+
+	
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+	public int getNumero() {
+		return numero;
+	}
+	 
+}

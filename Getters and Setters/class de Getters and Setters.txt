@@ -1,0 +1,76 @@
+public class Practica {
+	//Atributos privados de mi clase
+	 private int numero;
+	 private double decimales;
+	 private String nombre="";
+	 private int numero2;
+	 private char letra;
+	 int variable;
+	 
+	//Metodo contructor
+	public Practica () {  // Inicializamos las variables
+		numero=3; 
+		decimales=12.3;
+		nombre="Jorge";
+		numero2=36;
+		letra='x';
+	}
+	
+	//Metodos Getters y Setters...
+	
+	//--Unicamente para variable numero
+		public void setNumero (int numero) {
+			this.numero = numero;
+		}
+		public int getNumero () {
+			return numero;
+		}
+		
+		
+		//--Unicamente para variable decimales
+		public void setDecimales (double decimales) {
+			this.decimales = decimales;
+		}
+		public double getDecimales () {
+			return decimales;
+		}
+
+		
+		
+		//--Unicamente para variable nombre
+		public void setNombre (String nombre) {
+			this.nombre = nombre;
+		}
+		public String getNombre() {
+			return nombre;
+		}
+
+
+		//--Unicamente para variable numero2
+		public void setNumero2(int numero2) {
+			this.numero2 = numero2;
+		}
+		public int getNumero2() {
+			return numero2;
+		}
+		
+		
+		//--Unicamente para variable letra
+		public void setLetra(char letra) {
+			this.letra = letra;
+		}
+		public char getLetra() {
+			return letra;
+		}	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

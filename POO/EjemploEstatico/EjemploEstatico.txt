@@ -1,0 +1,17 @@
+
+public class EjemploEstatico {
+
+    public static void main(String[] args) {
+
+        Persona objClasePersona = new Persona("Jose");
+        System.out.println("Persona metodo toString: " + objClasePersona);
+        
+        Persona obj2ClasePersona = new Persona("Luis");
+        System.out.println("segundo metodo toString "+obj2ClasePersona.toString());
+        
+        
+        //Llamando al metodo contador estatico...
+        System.out.println("Metodo contador estatico: "+objClasePersona);
+   
+    }
+}

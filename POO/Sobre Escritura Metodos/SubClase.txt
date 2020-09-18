@@ -1,0 +1,16 @@
+package ejemplo;
+
+public class SubClase extends ClaseBase{
+	
+/*	La notacion @Override nos indica si escribimos bien el metodo de la clase Padre aqui en la Clase Hija
+ 		ya que si no lo hubieramos escrito bien, signifa que seria otro metodo independiente de la clase
+ 	Base, es decir otro metodo que no tiene que ver con este mismo y por lo tanto no estariamos haciendo	
+ 	una Sobre Escritura del metodo, esta notacion nos hace saber esto dandonos un error al momento de
+ 	escribirlo
+ */
+	
+	@Override
+	public void saySomething() {
+		System.out.println("soy la clase hija");
+	} 
+}

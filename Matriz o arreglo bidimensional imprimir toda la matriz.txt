@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Prac {
+	static Scanner entrada=new  Scanner(System.in);
+	public static void main(String[] args) {
+	
+		
+		int [][] matriz= {{1, 2, 3}, 
+						  {4, 5, 6},
+						  {4, 5, 6},
+						  {9, 9, 9}};  //Matriz o arreglo bidimensional de 3x3
+		
+		
+		for (int i=0; i<4; i++) { //El primer indice me indica el numero de columas osea el numero de las columnas horizontalmente
+			for(int j=0; j<3; j++) { //El segundo indice me indica el numero de las filas verticalmente en este caso 3
+				System.out.print(matriz[i][j]+" ");
+				
+			}
+		}
+
+	
+		
+		
+		
+	}
+}

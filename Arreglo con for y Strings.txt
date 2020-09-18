@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Arreglos_string {
+	public static void main(String[] args) {
+		
+		Scanner recibo = new Scanner (System.in);
+		int cant_alum=0;
+		
+		System.out.println("Introduce Cantidad de Alumnos: ");
+		cant_alum=recibo.nextInt();
+		
+		String [] alumnos = new String [cant_alum];
+		
+		for(int i=0; i<cant_alum; i++) {
+			System.out.println("Introduce nombre Alumno: "+ (i+1));
+			alumnos[i]=recibo.next();
+		}
+		
+		
+		for(int i=0; i<cant_alum; i++) {
+			System.out.println("Alumnos guardados son: "+ alumnos[i] );
+		}
+	}
+
+}

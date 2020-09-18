@@ -1,0 +1,35 @@
+package operaciones;
+public class Estudiante extends Persona{
+	//Atributos de esta Clase
+	private int codigoEstudiante;
+	private float notafinal;
+	
+	//Constructor...
+	public Estudiante (String nombre, String apellido, int edad, int codigoEstudiante, float notafinal) {
+		super(nombre, apellido, edad); //--Atributos que ya estaban inicializados
+		
+		//Inicializando Atributos de esta misma Clase
+		this.codigoEstudiante = codigoEstudiante;
+		this.notafinal = notafinal;
+	}
+	
+	
+	
+	public void mostrarDatos() {
+		System.out.println("Nombre: "+getNombre() + "\nApellido: "+getApellido()+"\nEdad: "+ getEdad()+ "\nCodigo Estudiante: "+codigoEstudiante+"\nNotaFinal: "+notafinal);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class SumaFila {
+	static Scanner entrada=new Scanner (System.in);
+	public static void main(String[] args) {
+			
+		int matriz[][] =new int [3][3];
+		
+		System.out.println("Llenar");
+		for (int i=0; i<matriz.length; i++) {
+			for(int j=0; j<matriz.length; j++) {
+				System.out.print("Matriz ["+i+"]["+j+"]: ");
+				matriz[i][j]=entrada.nextInt();
+			}
+		}
+		
+		System.out.println("\nMatriz Original:");
+		for (int i=0; i<matriz.length; i++) {
+			for(int j=0; j<matriz.length; j++) {
+				System.out.print(matriz[i][j] + " ");
+			}
+			System.out.println();
+		}
+		
+		System.out.println("Suma Diagonal:");
+		int suma=0;
+		for (int i=0, j=0; i<matriz.length; i++, j++) {
+			suma += matriz[i][j];
+			System.out.print(matriz[i][j] + " ");
+		}
+System.out.println("La suma de la matriz principal es: "+suma);		
+
+	}
+}

@@ -1,0 +1,39 @@
+package practicando_nomas;
+import java.util.Scanner;
+public class Checando {
+	public static void main(String[] args) {
+		
+		Scanner entrada=new Scanner (System.in);
+		String cadena="";
+		
+		System.out.println("dame algo");
+		cadena=entrada.nextLine();
+		
+		for (int i=0; i<cadena.length(); i++){
+			char caracter = cadena.toUpperCase().charAt(i);
+			int valorASCII = (int)caracter;
+			if (valorASCII != 165 && (valorASCII < 65 || valorASCII > 90)) {
+				System.out.println("no es letra");
+				break;
+			}
+			else {
+				System.out.println("me diste letra: " + cadena);
+				break;
+			}
+
+
+		}
+		
+		
+		//Recorremos cada caracter de la cadena y comprobamos si son letras.
+				//Para comprobarlo, lo pasamos a mayuscula y consultamos su numero ASCII.
+				//Si está fuera del rango 65 - 90, es que NO son letras.
+				//Para ser más exactos al tratarse del idioma español, tambien comprobamos
+				//el valor 165 equivalente a la Ñ
+		
+	
+		
+
+	}
+
+}

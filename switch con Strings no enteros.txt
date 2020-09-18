@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Comparar {
+	public static void main(String[] args) {
+		
+		Scanner recibo = new Scanner (System.in);
+		String opc="";
+
+		System.out.println("Dame dia:");
+		opc=recibo.next();
+		
+		switch(opc) {
+		case "Lunes": System.out.println("Es dia laboral");
+		break;
+		case "Martes": System.out.println("Es martes");
+		break;
+		}
+	}
+}

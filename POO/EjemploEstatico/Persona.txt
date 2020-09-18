@@ -1,0 +1,46 @@
+//Se puede ver en la practica el contexto estatico y dinamico de un atributo...
+//Esto con el metodo contadorPersonas, cuando esta declarado de forma estatica puede actuar como contador
+//Cuando esta declarado como atributo normal no funje como contador...
+//La manera correcta de llamar al metodo estatico en el metodo toString es mediante el objeto creado de la clase Persona
+public class Persona {
+    //Atributos de la Clase...
+    private int idPersona; //--Se asocia con un objeto (instancia)
+    private String nombre; //--Se asocia con un objeto (instancia)
+    private  int contadorPersonas; //--Se asocia con la clase y no con los objetos...
+    
+    //Constructor
+    public Persona (String nombre ){
+        this.idPersona = ++contadorPersonas;
+        this.nombre = nombre;
+    }
+    
+    //Getter
+    public int getIdPersona(){
+        return idPersona;
+    }
+  
+    
+    
+    //Getter
+    public String setNombre(){
+        return nombre;
+    }
+    //Setter
+    public void getNombre(String nombre){
+        this.nombre = nombre;
+    }
+    
+    
+    //Getter de metodo estatico
+    public   int getContadorPersonas(){
+        return contadorPersonas;
+    }
+    
+    
+    //Metodo toString
+    @Override
+    public String toString(){
+        return "idPersona: "+idPersona+"\nNombre: "+nombre+"\ncontador personas: "+contadorPersonas;
+    }
+ 
+}

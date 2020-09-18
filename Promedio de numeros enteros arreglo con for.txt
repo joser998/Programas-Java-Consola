@@ -1,0 +1,34 @@
+import java.util.Scanner;
+import java.lang.Math;
+public class Comparar {
+	public static void main(String[] args) {
+		//Promedio de un vector...
+		Scanner recibo = new Scanner (System.in);
+		int cant_num=0;
+		int total=0;
+		
+		
+		System.out.println("Introduce cantidad de numeros a promediar: ");
+		cant_num=recibo.nextInt();
+		
+		int [] numeros = new int [cant_num];
+		
+		for(int i=0; i<cant_num; i++) {
+			System.out.println("Introduce numeros a promediar: ");
+			numeros[i]=recibo.nextInt();
+			
+		}
+		
+		for (int i=0; i<cant_num; i++) {
+			total += numeros[i]; // todos los numeros que se metieron en el for, los va sumando y guardando en variable total
+			
+		}
+		
+		total= total/cant_num; //decimos que variable total es igual a la suma de todos los numeros metidos en el for entre la cantidad
+		                         // de numeros que son 
+		
+		System.out.println("El promedio es: " +total);  // muestra el resultado de la variable total, osea el promedio ya hecho
+		
+		
+	}
+}

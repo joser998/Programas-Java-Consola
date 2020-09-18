@@ -1,0 +1,37 @@
+package practicando_nomas;
+import java.util.Scanner;
+public class Menor {
+	public static void main(String[] args) {
+		Scanner entrada=new Scanner (System.in);
+		int cantidad=0;
+		
+		System.out.println("Ingresa cantidad de numeros: ");
+		cantidad=entrada.nextInt();
+		
+		int[] numeros=new int[cantidad];
+		
+		for (int i=0; i<cantidad; i++) {
+			System.out.println("Ingresa numero: ");
+			numeros[i]=entrada.nextInt();
+		}
+		
+		int menor=numeros[0];
+		
+		for(int i=1; i<numeros.length; i++) {
+			if(numeros[i]<menor) {
+				menor=numeros[i];
+			}
+		}
+		
+		System.out.println("El numero menor es: "+menor);
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

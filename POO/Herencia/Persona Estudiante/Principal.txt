@@ -1,0 +1,25 @@
+package operaciones;
+import java.util.Scanner;
+public class Principal {
+	public static void main (String args[]) {
+		Scanner sc= new Scanner (System.in);
+		
+		System.out.print("Inserta nombre: ");
+		String name=sc.next();
+		System.out.print("Inserta apellido: ");
+		String ape=sc.next();
+		System.out.print("Inserta edad: ");
+		int age=sc.nextInt();
+		System.out.print("Inserta codigo estudiante: ");
+		int codigito=sc.nextInt();
+		System.out.print("Inserta nota final: ");
+		int calf=sc.nextInt();
+		
+		//Instancia de Clase Estudiante...
+		Estudiante estudiante = new Estudiante (name,ape,age,codigito,calf);
+			
+		//Llamada metodo mostrarDatos
+		estudiante.mostrarDatos();	
+		
+	}
+}

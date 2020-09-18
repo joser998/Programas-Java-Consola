@@ -1,0 +1,20 @@
+/*
+4.3.7 Programa que lee números hasta que se ingrese un negativo y muestra la suma de los números positivos. 
+ */
+package practicando_nomas;
+import java.util.Scanner;
+public class Hola {
+	static Scanner sc = new Scanner (System.in);
+	public static void main(String[] args) {
+		int numero=0, sumatoria=0;
+	
+do {		
+	System.out.println("Ingresa numero");	
+	numero=sc.nextInt();
+	sumatoria +=numero;
+}while(numero>=1);
+		
+	System.out.println("La sumatoria de numeros positivos es: " + sumatoria);
+		
+	}
+}

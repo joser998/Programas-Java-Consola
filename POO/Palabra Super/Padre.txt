@@ -1,0 +1,7 @@
+public class Padre {
+
+	public void Saludar(){
+        System.out.println("Clase Padre	");
+    }
+	
+}

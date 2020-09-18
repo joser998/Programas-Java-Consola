@@ -1,0 +1,50 @@
+import java.util.Scanner;
+public class Prac {
+	static Scanner entrada=new  Scanner(System.in);
+	public static void main(String[] args) {
+	
+	System.out.println("Matriz Transpuesta");
+	System.out.println("Ingresa numero Columnas: ");
+	int nColum=entrada.nextInt();
+	System.out.println("Ingresa numero Filas:");
+	int nFilas=entrada.nextInt();
+	
+	int [] [] matriz= new int [nColum] [nFilas];	
+		
+	System.out.println("Guardar Matriz");
+	for (int i=0; i<nColum; i++) {
+		for(int j=0; j<nFilas; j++) {
+			System.out.print("["+(i+1) +"]" + "["+(j+1)+"]" + ".-Ingresa numero: ");
+			matriz[i][j]=entrada.nextInt();
+		}
+	}
+		
+	System.out.println("\nMatriz Original");	
+	for (int i=0; i<nColum; i++) {
+		for(int j=0; j<nFilas; j++) {
+			System.out.print(matriz[i][j] + " ");
+		}
+		System.out.println();
+	}
+		
+	System.out.println("Transponiendo la Matriz");	
+		
+	int aux=0;
+	for (int i=0; i<nColum; i++) {
+		for(int j=0; j<i; j++) {
+			aux=matriz[i][j];
+			matriz[i][j]=matriz[j][i];
+			matriz[j][i]=aux;
+		}
+	}
+		
+	System.out.println("La Matriz Transpuesta es:\n");
+	for (int i=0; i<nColum; i++) {
+		for (int j=0; j<nFilas; j++) {
+			System.out.print(matriz[i][j] + " ");
+		}
+		System.out.println();
+	}
+	
+	}
+}

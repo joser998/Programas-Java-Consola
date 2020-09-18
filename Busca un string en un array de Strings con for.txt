@@ -1,0 +1,52 @@
+/* Este programa pide al usuario el numero de nombres que guardara, y depues pide nombres a guardar, y despues pide que pongas el 
+ 	nombre a buscar y si lo encuentra te dice sino te dice que no lo encontro
+ * 
+ */
+
+import java.util.Scanner;
+public class Ordenamiento_num_flotantes {
+	public static void main(String[] args) {
+		
+		
+		
+		Scanner recibo = new Scanner (System.in);
+		int vuelta=0;  //cantidad de nombres que se guardaran
+		boolean encontrado = false;  //bandera boleana activada en falso para cuando encuentre o no encuentre el string guardado
+		String nombre_busqueda="";  // variable tipo string donde sera guardado el nombre que se buscara en el for
+		
+		System.out.println("cuantos nombres guardaras: ");
+		vuelta=recibo.nextInt();                         //se guarda numero de veces que se pedira al usuario para guardar nombres
+		
+		String [] nombres = new String [vuelta];  //
+		
+		
+		for(int i=0; i<vuelta; i++) {
+			System.out.println("Introduce nombres: "+ (i+1));
+			nombres[i]=recibo.next();
+		}
+		
+		
+		
+		System.out.println("ingrese un nombre");
+		nombre_busqueda = recibo.next();
+		
+		for (int i=0; i<vuelta; i++) {
+			if(nombre_busqueda.equalsIgnoreCase(nombres[i])) {
+				System.out.println("Nombre encontrado " + nombre_busqueda);
+				encontrado=true;
+			}
+			
+		}
+		
+		if(encontrado==false) {
+			System.out.println("no se encontro");
+		}
+		
+
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,47 @@
+import java.util.*;
+public class ExpendedoraGolosinas {
+	static Scanner sc=new Scanner (System.in);
+	public static void main(String[] args) {
+	System.out.println("Ordenar Alfabeticamente Matriz");	
+	System.out.println("Inserta numero filas");	
+	int nFilas=sc.nextInt();	
+	System.out.println("Inserta numero columnas");	
+	int nColum=sc.nextInt();	
+		
+	String [][] nombres = new String [nFilas][nColum];
+	
+	System.out.println("Llenar arreglo");
+	for(int i=0; i<nFilas; i++) {
+		for(int j=0; j<nColum; j++) {
+			System.out.print("["+i+"]["+j+"]: ");
+			nombres[i][j]=sc.next();
+		}
+	}
+	
+	//Ordenar Matriz	
+	for (int i=0; i<nFilas; i++) {
+		for(int j=0; j<nColum; j++) {
+			for(int x=0; x<nFilas; x++) {
+				for(int y=0; y<nColum; y++) {
+					if(nombres[i][j].compareToIgnoreCase(nombres[x][y]) < 0) {
+						String aux=nombres[i][j];
+						nombres[i][j]=nombres[x][y];
+						nombres[x][y]=aux;
+					}
+				}
+			}
+		}
+	}
+		
+	System.out.println("\nEl arreglo ordenado alfabeticamente es:\n");	
+	for (int i=0; i<nFilas; i++) {
+		for(int j=0; j<nColum; j++) {
+			System.out.print("["+nombres[i][j]+"]");
+		}
+			System.out.println();
+	}
+	
+	
+
+	}
+}

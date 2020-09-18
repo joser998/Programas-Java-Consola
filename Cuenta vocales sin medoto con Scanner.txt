@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class Vocales {
+	static Scanner entrada=new Scanner (System.in);
+	public static void main(String[] args) {
+	
+		String texto="";
+		System.out.println("Inserta frase: ");	
+		texto=entrada.next();
+		texto=texto.toLowerCase();
+		
+		int contador=0;
+		char vocales[]= {'a', 'e', 'i', 'o', 'u'};
+		
+		char caracteractual;
+		boolean esVocal;
+		
+		for(int i=0; i<texto.length(); i++) {
+			caracteractual=texto.charAt(i);
+			esVocal=false;
+			
+			for(int j=0; j<vocales.length && !esVocal; j++) {
+				if(caracteractual==vocales[j]) {
+					esVocal=true;
+				}
+			}
+			
+			if(esVocal) {
+				contador++;
+			}
+		}
+		
+		System.out.println("hay "+ contador +" vocales");
+		
+
+	}
+
+}

@@ -1,0 +1,51 @@
+package practicando_nomas;
+import java.util.Scanner;
+public class CuentaDigitos {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+		
+		System.out.println("Inserta filas");
+		int nFilas=sc.nextInt();
+		System.out.println("Inserta columnas");
+		int nColumnas=sc.nextInt();
+		
+		int [][] matriz = new int [20][20];
+		
+		System.out.println("Llenado Matriz ");
+		for(int i=0; i<nFilas; i++) {
+			for(int j=0; j<nColumnas; j++) {
+				System.out.print("["+i+"]["+j+"]: ");
+				matriz[i][j]=sc.nextInt();
+			}
+		}
+		
+		System.out.println("Matriz");
+		for(int i=0; i<nFilas; i++) {
+			for(int j=0; j<nColumnas; j++) {
+				System.out.print(matriz[i][j] + " ");
+			}
+				System.out.println();
+		}
+		
+		//Cuenta Digitos
+		System.out.println("Conteo de Digitos");
+		for(int i=0; i<nFilas; i++) {
+			for(int j=0; j<nColumnas; j++) {
+				System.out.print("n[" + matriz [i] [j] + "] tiene: " + digitos (matriz [i] [j]) + " digito(s)");
+			}
+		}
+		
+	}
+	
+	public static int digitos (int n) { 
+		  int contador = 0; 
+		  while (n != 0) { 
+			  n = n / 10; 
+			  contador++; 
+		  } 
+		  return (contador); 
+	}
+	
+
+	
+}

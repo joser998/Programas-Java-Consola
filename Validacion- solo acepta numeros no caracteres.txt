@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Validacion {
+	public static void main(String[] args) {
+		
+		
+//	PROGRAMA QUE VALIDA SOLO NUMEROS ENTEROS, NO ACEPTA CARACTERES O SIMBOLOS...	
+			
+	Scanner recibo = new Scanner (System.in);	
+	int bandera=0,a=0;
+	
+do {
+	try {
+	bandera=0;
+	System.out.println("Introduce numero: \t");
+	a=recibo.nextInt();
+	System.out.println("Me diste numero: \t" + a);
+	
+	}catch (Exception e) {
+		System.out.println("Caracter no valido");
+		bandera=1;
+		recibo.nextLine();
+	}
+}while(bandera!=0);	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+			
+	}
+
+

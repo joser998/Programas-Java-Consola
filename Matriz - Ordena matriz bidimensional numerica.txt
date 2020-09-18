@@ -1,0 +1,54 @@
+import java.util.*;
+public class ExpendedoraGolosinas {
+	static Scanner sc=new Scanner (System.in);
+	public static void main(String[] args) {
+	System.out.println("Matriz Transpuesta");	
+	System.out.println("Inserta filas?");	
+	int nFilas=sc.nextInt();	
+	System.out.println("Inserta Columnas?");	
+	int nColum=sc.nextInt();	
+		
+	int [][] matriz = new int [nFilas][nColum];	
+		
+	System.out.println("Llenar Matriz");	
+	for(int i=0; i<nFilas; i++) {
+		for(int j=0; j<nColum; j++) {
+			System.out.print("["+i+"]["+j+"]: ");
+			matriz[i][j]=sc.nextInt();
+		}
+	}
+	
+	System.out.println("Matriz");
+	for(int i=0; i<nFilas; i++) {
+		for(int j=0; j<nColum; j++) {
+			System.out.print(matriz[i][j] + " ");
+		}
+			System.out.println();
+	}
+	
+	//Ordenar Matriz
+	for (int i=0; i<nFilas; i++) {
+		for(int j=0; j<nColum; j++) {
+			for(int x=0; x<nFilas; x++) {
+				for(int y=0; y<nColum; y++) {
+					if(matriz[i][j] < matriz[x][y]) {
+						int aux=matriz[i][j];
+						matriz[i][j]=matriz[x][y];
+						matriz[x][y]=aux;
+					}
+				}
+			}
+		}
+	}
+	
+	//Mostrar Matriz
+	System.out.println("Matriz Ordenada\n");
+	for (int i=0; i<nFilas; i++) {
+		for(int j=0; j<nColum; j++) {
+			System.out.print(matriz[i][j] + " ");
+		}
+			System.out.println();
+	}
+	
+	}
+}

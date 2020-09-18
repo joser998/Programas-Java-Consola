@@ -1,0 +1,12 @@
+public class AnimalHerbivoro extends Animal {
+
+//Metodo Sobre Escrito de Clase SerVivo	
+	@Override
+	public void alimentarse() {
+		System.out.println("El animal herbivoro se alimenta de hierba");
+	}
+	
+	
+
+	
+}

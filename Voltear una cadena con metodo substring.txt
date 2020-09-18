@@ -1,0 +1,19 @@
+package practicando_nomas;
+import java.util.Scanner;
+public class Hola {
+	static Scanner sc = new Scanner (System.in);
+	public static void main(String[] args) {
+
+		String cadena=""; 
+		System.out.println("ingresa una palabra"); 
+		String palabra=sc.nextLine();   
+		int t =palabra.length();   
+		
+		for(int i=t; i>0; i--){   
+			cadena=cadena+palabra.substring((i-1), i);   
+		}   
+		
+		System.out.println(cadena);
+		 
+	}
+}

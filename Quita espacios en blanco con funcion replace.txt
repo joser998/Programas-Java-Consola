@@ -1,0 +1,17 @@
+/*
+  Quita los espacios de una cadena de caracteres, lo hace para contraseñas nombres de usuarios etc
+ */
+import java.util.Scanner;
+public class Practica_pagina{
+	public static void main(String[] args){
+
+
+		String cadena 	="Hola   Mundo  1";
+		cadena=cadena.replace(" ", "");
+		
+		System.out.println("Cadena: " + cadena+ " Longitud: " + cadena.length());
+
+		
+	}
+
+}

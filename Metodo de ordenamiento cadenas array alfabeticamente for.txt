@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Burbuja {
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner (System.in);
+		int cantidad=0;
+		String aux="";
+		
+		System.out.println("cuantos nombres meteras: ");
+		cantidad=entrada.nextInt();
+		
+		
+		String [] vector = new String [cantidad];
+		
+		
+		// guardar...
+	for (int i=0; i<cantidad; i++) {	
+		System.out.println((i+1) + ".-Ingresa una cadena: ");
+		vector[i]=entrada.next();	
+	}
+		
+		// ordenar
+	for (int i=0; i<cantidad; i++) {
+		for (int j=0; j<cantidad && i != j; j++) {
+			if (vector[i].compareToIgnoreCase(vector[j]) < 0) {
+				
+				aux=vector[i];
+				vector[i]= vector[j];
+				vector[j]= aux;
+				
+			}
+		}
+	}
+
+
+	
+		
+	//mostrar...
+
+
+			
+	
+
+	}
+
+}

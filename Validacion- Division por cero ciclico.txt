@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class boleanos {
+
+	public static void main(String[] args) {
+		float a=0, b=0, res=0;
+		Scanner recibo = new Scanner (System.in);
+    	
+		System.out.println("Dame Dividendo\n");
+		a=recibo.nextFloat();
+		
+    do {	
+    	System.out.println("Dame Divisor\n");
+    	b=recibo.nextFloat();
+    		
+    	if (b==0) {
+    		System.out.println("No es Posible dividir por cero...\n");
+    	}
+     }while (b==0);
+        
+		res=a/b;
+		System.out.println("La resta fue: " + res);
+		
+		
+	}
+
+}

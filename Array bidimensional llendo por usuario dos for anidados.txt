@@ -1,0 +1,56 @@
+/*
+  Este programa mostra Primer arreglo bidimensional ya declarado mediante dos for anidados en consola
+  Unicamente para numeros enteros...
+ */
+import java.util.Scanner;
+public class Bidimensionales {
+	public static void main(String[] args) {
+		Scanner ob = new Scanner (System.in);
+		int n=0, m=0;  // variables para almacenar la cantidad de filas y columnas por usuario...
+		int num=0; //para almacenar la variable que se estara guardando dentro del for
+		
+		System.out.println("Ingrese la cantidad de filas: ");
+		n=ob.nextInt();
+		System.out.println("Ingrese la cantidad de columnas: ");
+		m=ob.nextInt();
+		
+		int matriz [][] = new int [n][m];
+		
+		
+		System.out.println("Ingrese valores de la Matriz: ");
+		
+		
+		for(int i=0; i<n; i++) {
+			for(int j=0; j<m; j++) {
+				
+				num=ob.nextInt();
+				matriz[i][j]=num;	
+				
+			}
+		}
+		
+		
+		
+		for (int i=0; i<n; i++) {
+			for(int j=0; j<m; j++) {
+				System.out.println("Impresion de matriz: " + matriz[i][j] + "\t");
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+	}
+
+}

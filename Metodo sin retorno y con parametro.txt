@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Metodos {
+
+	public static void main(String[] args) {
+		
+		Scanner entrada = new Scanner (System.in);
+		String nombre="";
+		
+		System.out.println("Dame tu nombre: ");
+		nombre=entrada.nextLine();
+		
+		mensaje(nombre);
+		
+	}
+	
+	public static void mensaje(String nombre) {
+		
+		System.out.println("hola " + nombre);
+		
+	}
+	
+
+}

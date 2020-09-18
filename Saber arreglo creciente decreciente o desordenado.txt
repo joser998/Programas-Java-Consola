@@ -1,0 +1,55 @@
+import java.util.Scanner;
+public class Prac {
+	static Scanner entrada=new  Scanner(System.in);
+	public static void main(String[] args) {
+	boolean creciente=false;
+	boolean decreciente=false;
+	
+	
+	System.out.println("Ingresa cantidad numeros a guardar: ");
+	int cantidad=entrada.nextInt();
+	
+	double [] numeros=new double [cantidad];
+	
+	for(int i=0; i<cantidad; i++) {
+		System.out.println((i+1) + ".-Ingresa numero: ");
+		numeros[i]=entrada.nextDouble();
+	}
+	
+//Se hace la comparacion para saber si son numeros en forma creciente 1-2-3-4
+//O en forma decreciente 5-4-3-2-1
+//O saber si estan desacomodados
+	for(int i=0; i<cantidad-1; i++) {
+		if(numeros[i] < numeros[i+1]) {
+			creciente=true;
+		}
+		if(numeros[i] > numeros[i+1]) {
+			decreciente=true;
+		}
+	}
+	
+	if(creciente==true && decreciente==false) {
+		System.out.println("\nEl arreglo esta en forma Creciente");
+	}
+	else if(creciente==false && decreciente==true) {
+			System.out.println("\nEl arreglo esta en forma Decreciente");
+	}
+	else if(creciente==true && decreciente==true) {
+		System.out.println("\nEl arreglo esta Desordenado");
+	}
+	else if(creciente==false && decreciente==false) {
+		System.out.println("Todos los numeros son Iguales");
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	}
+
+}

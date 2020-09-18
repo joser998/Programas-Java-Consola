@@ -1,0 +1,28 @@
+package Paquete1;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner (System.in);
+		Clase1 ob=new Clase1(); //instancia
+		int a=0;
+		int numeroclase=0;
+		
+		System.out.println("Dame valor int");
+		a=sc.nextInt();
+		ob.setDia(a);
+		System.out.println(ob.getDia());
+	
+		System.out.println("Dame valor string");
+		String nombre=sc.next();
+		ob.setNombre(nombre);
+		System.out.println(ob.getNombre());
+		
+		System.out.println("dame numero ");
+		numeroclase=sc.nextInt();
+		ob.setNumero(numeroclase);
+		System.out.println("el numero es: "+ ob.getNumero());
+		
+		
+	}
+}

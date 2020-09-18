@@ -1,0 +1,51 @@
+/*
+  Quita los espacios de una cadena de caracteres, lo hace para contraseñas nombres de usuarios etc
+ */
+import java.util.Scanner;
+public class Practica_pagina{
+	public static void main(String[] args){
+
+		Scanner entrada = new Scanner (System.in);
+		
+		int  nElementos=0, aux=0;
+		
+		System.out.println("Introduce cantidad de elementos a ordenar: ");
+		nElementos=entrada.nextInt();
+		
+		int [] arreglo = new int [nElementos];
+		
+		for(int i=0; i<nElementos; i++) {
+			System.out.println("Digita numero: ");
+			arreglo[i]=entrada.nextInt();
+		}
+		
+		
+		//Metodo burbuja...
+		for (int i=0; i<(nElementos-1); i++) {  //iterador
+			for (int j=0; j<(nElementos-1); j++) {
+				if(arreglo[j]> arreglo[j+1]) {
+					aux= arreglo[j];
+					arreglo[j]= arreglo[j+1];
+					arreglo[j+1] = aux;
+				}
+			}
+		}
+		
+		
+		
+		//Mostrando el arreglo ordenado de forma creciente...
+		for (int i=0; i< nElementos; i++) {
+			System.out.println(" " + arreglo[i]);
+		}
+		
+		
+		for (int i=(nElementos-1); i>=0; i--) {
+			System.out.println(arreglo[i]);
+		}
+		
+		
+
+		
+	}
+
+}

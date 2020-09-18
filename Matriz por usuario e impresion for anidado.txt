@@ -1,0 +1,47 @@
+import java.util.Scanner;
+public class Prac {
+	static Scanner entrada=new  Scanner(System.in);
+	public static void main(String[] args) {
+	
+	int numeroFilas=0;	
+	int numeroColumnas=0;	
+		
+	System.out.println("Introduce numero de Filas: ");
+	numeroFilas=entrada.nextInt();
+	System.out.println("Introduce numero de Columnas");
+	numeroColumnas=entrada.nextInt();
+	
+	int [][] matriz=new int [numeroFilas][numeroColumnas]; //Declaracion de arreglo bidimensional 
+	
+	
+	//Rellenar arreglo con doble for anidado
+	System.out.println("Digita Matriz:");
+	for(int i=0; i<numeroFilas; i++) {
+		for(int j=0; j<numeroColumnas; j++) {
+			System.out.println("Ingresa numero para Matriz "+"["+(i+1)+"]" +"["+(j+1)+"]"+" :" );
+			matriz[i][j]=entrada.nextInt();
+		}
+	}
+	
+	//Mostrar Matriz
+	System.out.println("La Matriz es: ");
+	for(int i=0; i<numeroFilas; i++) {
+		for(int j=0; j<numeroColumnas; j++) {
+			System.out.print(matriz[i][j]+" ");
+		}
+		System.out.println();
+	}
+	
+
+	/*
+	 		   i
+	 	
+	 		  98,23,3
+	 	j	  43,54,65 
+	 		  98,10,90
+	     
+	 */
+	
+
+	}
+}

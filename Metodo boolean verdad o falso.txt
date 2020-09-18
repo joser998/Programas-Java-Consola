@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main {
+public static Scanner entrada=new Scanner (System.in);
+	public static void main(String[] args) {
+	
+	System.out.println("Dame numero: ");	
+	int a=entrada.nextInt();	
+		
+	System.out.println(verdadOfalso(a));
+	
+		
+		
+
+	}
+
+	
+public static boolean verdadOfalso(int numero) {
+	//retorna true o verdadero si se cumple que numero sea 
+	//mayor que 0.
+	//Tambien se puede hacer con if y else 
+	return numero>0;
+}
+	
+	
+	
+	
+}

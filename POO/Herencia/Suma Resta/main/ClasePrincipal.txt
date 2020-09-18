@@ -1,0 +1,26 @@
+package main;
+import operaciones.ClaseHija_Suma;
+import operaciones.ClaseHija_Resta;
+public class ClasePrincipal {
+	public static void main (String args[]) {
+		
+		//Instancia para ClaseHija_Suma
+		ClaseHija_Suma mensajeroSuma = new ClaseHija_Suma();
+		
+		//Invocar metodo
+		mensajeroSuma.PedirDatos();
+		mensajeroSuma.Sumar();
+		System.out.print("El resultado de la suma es: ");
+		mensajeroSuma.MostrarResultado();
+		
+		//Instancia para ClaseHija_Resta
+		ClaseHija_Resta mensajeroResta = new ClaseHija_Resta();
+		
+		//Invocar metodos
+		mensajeroResta.PedirDatos();
+		mensajeroResta.Restar();
+		System.out.print("El resultado de la resta es: " );
+		mensajeroResta.MostrarResultado();
+			
+	}
+}

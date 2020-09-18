@@ -1,0 +1,26 @@
+public class Res {
+	public static void main(String[] args) {
+	Practica objeto = new Practica(); //Instancia de la clase "Practica"
+	
+	objeto.setNumero(5);  //--Establecemos el nuevo valor de "numero" en este caso un int
+	System.out.println("El numero de ruedas es: " + objeto.getNumero()); //--Mostramos el valor de numero
+		
+	objeto.setDecimales(3.22); //--Establecemos el valor del numero decimal 
+	System.out.println("El valor de numeros es: "+ objeto.getDecimales()); //--Mostramos el valor del decimal
+		
+	objeto.setNombre("Jose Luis");	
+	System.out.println("El valor de nombre es: "+ objeto.getNombre());	
+		
+	objeto.setLetra('a');	
+	System.out.println("El valor de letra es: "+ objeto.getLetra());	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+}

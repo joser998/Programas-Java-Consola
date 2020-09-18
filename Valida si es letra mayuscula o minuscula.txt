@@ -1,0 +1,27 @@
+package practicando_nomas;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args){ 
+
+		Scanner sc = new Scanner(System.in);
+        char car=0;
+        char car1;
+         System.out.print("Introduzca un carácter: ");
+         
+       
+      try {   
+         car = (char) System.in.read(); //lee un solo caracter
+      }catch(Exception e) {
+    	  System.out.println("error");
+      }
+         if(Character.isUpperCase(car)) //utilizamos el método isUpperCase de la clase Character
+        	 System.out.println("Es una letra mayúscula");   
+         else
+        	 System.out.println("No es una letra mayúscula"); 
+	
+
+		
+			
+	}
+
+}

@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class Prac {
+	public static void main(String[] args) {
+	Scanner entrada=new Scanner (System.in);
+	
+	System.out.println("Ingresa Fila:");
+	int nFila=entrada.nextInt();
+	System.out.println("Ingresa Columna:");
+	int nColum=entrada.nextInt();
+	
+	int[][] matriz1=new int [nFila][nColum];
+	int[][] matriz2=new int [nFila][nColum];
+	int [][] sumatoria=new int [nFila][nColum]; //Tercer arreglo en el que se sumaran las matrices
+	
+	System.out.println("1° y 2° Matriz, LLenado:" );
+	for(int i=0; i<nFila; i++) {
+		for(int j=0; j<nColum; j++) {
+			System.out.print("Primer Matriz: "+"["+(i+1)+"]"+"["+(j+1)+"]: ");
+			matriz1[i][j]=entrada.nextInt();
+			System.out.print("Segunda Matriz: "+"["+(i+1)+"]"+"["+(j+1)+"]: ");
+			matriz2[i][j]=entrada.nextInt();
+			//Sumamos Matrices:
+			sumatoria[i][j]=matriz1[i][j] + matriz2[i][j];
+		}
+	}
+	
+		System.out.println("Primer Matriz: ");
+		mostrarMatriz(matriz1);
+		System.out.println("Segunda Matriz: ");
+		mostrarMatriz(matriz2);
+		System.out.println("Sumatoria 2 Matrices: ");
+		mostrarMatriz(sumatoria);
+	}
+		
+public static void mostrarMatriz(int arreglo [][]){
+	for (int i=0; i<arreglo.length; i++) {
+		for (int j=0; j<arreglo.length; j++) {
+			System.out.print(arreglo[i][j] + " ");
+		}
+		System.out.println();
+	}
+}
+
+}

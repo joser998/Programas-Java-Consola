@@ -1,0 +1,39 @@
+package practicando_nomas;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args){ 
+		Scanner entrada =new Scanner (System.in);
+		String frase="";
+		boolean bandera=false;
+		
+		System.out.println("Introduce frase: ");
+		frase=entrada.nextLine();
+		
+		frase = frase.toLowerCase();
+		frase = frase.replace(" ", "");
+		
+		for(int i=0; i<frase.length(); i++) {
+			if(frase.charAt(i) != frase.charAt(frase.length()-1-i)) {  //Si no son iguales, no es Palindromo
+				bandera=true;
+				//break;
+			}
+			else {
+					bandera=false;
+			}
+		}
+		
+		if(bandera==true) {
+			System.out.println("No era Palindromo "+ frase);
+		}
+		
+		else {
+			System.out.println("Me diste un Palindromo " + "'"+frase+"'");
+		}
+		
+
+	
+	}
+
+}
+
+

@@ -1,0 +1,48 @@
+import java.util.Scanner;
+public class SumaFila {
+	static Scanner entrada=new Scanner (System.in);
+	public static void main(String[] args) {
+			
+	System.out.println("Numero filas?");
+	int nFilas=entrada.nextInt();
+	System.out.println("Numero Columnas?");
+	int nColum=entrada.nextInt();
+	
+	int matriz [][] = new int [nFilas][nColum];
+	
+	System.out.println("LLenar Matriz");
+	for(int i=0; i<nFilas; i++) {
+		for(int j=0; j<nColum; j++) {
+			System.out.print("Matriz ["+i+"]["+j+"]: ");
+			matriz[i][j]=entrada.nextInt();
+		}
+	}
+	System.out.println("La matriz es:");
+	for (int i=0; i<nFilas; i++) {
+		for(int j=0; j<nColum; j++) {
+			System.out.print(matriz[i][j] + " ");
+		}
+		System.out.println();
+	}
+	
+
+	System.out.println("Que columna quieres sumar?");
+	int Columnas=entrada.nextInt();
+	
+	if(Columnas > nColum || Columnas < 1) {
+		System.out.println("No valido, solo pueden ser "+ nColum+" columnas");
+	}
+	
+	int sumaColumnas=0;
+	for(int j=0; j<Columnas; j++) {
+		sumaColumnas=0;
+		for(int i=0; i<nFilas; i++) {
+			sumaColumnas += matriz[i][j];
+		}
+	}
+	
+System.out.println("La suma de la columna ["+Columnas+"] es: "+ sumaColumnas);	
+	
+
+	}
+}
